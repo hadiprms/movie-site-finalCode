@@ -1,0 +1,150 @@
+@media screen and (min-width: 700px) {
+    .elementSeries {  
+        display: grid;  
+        grid-template-columns: repeat(8, 1fr);  
+        align-items: center;  
+        justify-content: center;  
+        gap: 1rem;  
+    }  
+    .element-divSeries {  
+        height: 200px;  
+        margin: 0px;  
+        padding: 5px;  
+        color: white;
+    }  
+    p {  
+        margin: 0 auto;  
+    }  
+    .image-containerSeries {  
+        position: relative;  
+    }  
+    .overlaySeries {  
+        display: flex;
+        position: absolute;  
+        top: 50%;  
+        left: 50%;  
+        transform: translate(-50%, -50%);  
+        background-color: black;  
+        color: white;  
+        padding: 10px;  
+        border-radius: 5px;  
+        font-size: 12px;  
+        font-weight: 600;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+        pointer-events: none;
+    }   
+    .image-containerSeries:hover .overlaySeries {  
+        opacity: 1;
+        visibility: visible; 
+    }  
+    .series-image:hover {  
+        transform: scale(1.1);  
+        filter: blur(1px);  
+    }  
+    .series-image {  
+        transition: transform 0.3s ease; 
+        width: 150px;
+        height: 230px;
+        margin-right: 10px; 
+    }
+    .seriesInfoHolder{
+        text-align: center;
+    }
+    .seriesInfoHolder .seriesTitleText{
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 140px;
+    }
+    .titleHolderSeries{
+        font-size: 20px;
+        text-align: left;
+        font-weight: 500;
+        color: white;
+    }
+    .All-seriesReturn{
+        border: 1px solid orange;
+        border-radius: 5px;
+        padding: 10px;
+        padding-bottom: 100px;
+        width: 100%;
+    }
+    .ratingOfSeries{
+        color: orange;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .All-seriesReturn {
+        padding: 20px;
+    }
+    .titleHolderSeries {  
+        text-align: center;  
+        margin-bottom: 40px;  
+        font-size: 20px;
+        color: white;
+    }
+    .elementSeries {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .element-divSeries {
+        width: calc(50% - 20px);
+        margin-bottom: 50px;
+        box-sizing: border-box;
+        color: white;
+        border: 1px solid orange;
+        border-radius: 10px;
+    }
+    .mediaSeries {
+        position: relative;
+        overflow: hidden;
+    }
+    .image-containerSeries {
+        position: relative; 
+    }
+    .series-image {
+        width: 100%;
+        height: 300px;
+        transition: transform 0.3s ease;
+        border-radius: 10px;
+    }
+    .overlaySeries {  
+        display: flex;
+        position: absolute;  
+        top: 50%;  
+        left: 50%;  
+        transform: translate(-50%, -50%);  
+        background-color: black;  
+        color: white;  
+        padding: 10px;  
+        border-radius: 5px;  
+        font-size: 20px;  
+        font-weight: 600;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+        pointer-events: none;
+    }
+    .seriesInfoHolder {
+        text-align: center;
+        margin-top: 10px;
+        font-size: 10px;
+    }
+    .seriesTitleText {
+        font-weight: bold;
+    }
+    .ratingOfSeries {
+        color: orange;
+    }
+    .image-containerSeries:hover .overlaySeries {
+        opacity: 1;
+        visibility: visible;
+    }
+    .series-image:hover {
+        filter: blur(3px);
+    } 
+}

@@ -1,0 +1,260 @@
+@media screen and (min-width: 700px) {
+    * {
+        box-sizing: border-box;
+    }
+    body {  
+        margin: 0;
+        overflow-x: hidden;
+    }
+    .element {  
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 20px;
+        margin: 0 auto;
+        max-width: 100%;
+        padding: 0 15px;
+        width: 95%;
+    }
+    .element-div {
+        color: white;
+    }
+    p {
+        margin: 0 auto;
+    }
+    .image-container { 
+        position: relative;
+    }  
+    .overlay {  
+        display: flex;
+        position: absolute;  
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: black;
+        color: white;
+        padding: 10px;
+        border-radius: 5px;
+        font-size: 12px;
+        font-weight: 600;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+        pointer-events: none;
+    }   
+    .image-container:hover .overlay {  
+        opacity: 1;
+        visibility: visible; 
+    }  
+    .movie-image:hover {  
+        transform: scale(1.1);  
+        filter: blur(1px);
+        border: 2px solid orange;
+    }  
+    .movie-image {  
+        transition: transform 0.3s ease; 
+        width: 170px;
+        height: 230px;
+        margin-right: 10px;
+        border-radius: 10px;
+    }
+    .movieInfoHolder{
+        text-align: center;
+    }
+    .movieInfoHolder .movieTitleText{
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 140px;
+    }
+    .titleHolder{
+        text-align: left;
+        color: white;
+        margin: 5px 0 30px 3%;
+    }
+    .All-moviesReturn{
+        border: 1px solid black;
+        border-radius: 5px;
+        padding: 10px;
+        padding-bottom: 100px;
+        margin: 5% 0 5% 0;
+        background-color: black;
+        width: 100%;
+    }
+    .ratingOfMovies{
+        color: orange;
+    }
+    .MP-Skeleton{
+        width: 170px;
+        height: 230px;
+        margin-right: 10px;
+        border-radius: 10px;
+    }
+    .addMoreButton{
+        margin: 0;
+        position: absolute;
+        margin-top: 5%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        border: none;
+    }
+    .genre-options {
+        position: absolute;
+        background-color: white;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        z-index: 1;
+        display: flex;
+        flex-wrap: wrap;
+        width: 300%;
+        padding: 5%;
+    }
+}
+/* .element{
+    justify-content: flex-start; change this for display of movies when have overflow in different pixels
+} */
+.genre-dropdown {
+    position: relative;
+    display: inline-block;
+}
+.element-div {  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+.main-genre-button {
+    background-color: orange;
+    color: black;
+    border-color: orange;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    width: 150px;
+}
+.genre-button {  
+    flex: 1 1 48%; 
+    background-color: white;
+    color: #333; 
+    border: 1px solid #ccc;
+    padding: 10px;
+    cursor: pointer;
+    margin: 1%;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+.genre-button:hover {
+    background-color: orange;
+    border-color: black;
+}
+.movieTitleText{
+    color: white;
+}
+.realseYearOfMobies{
+    color: white;
+}
+.ButtonRemove{
+    right: 10%;
+    padding: 10px 6px;
+}
+ 
+@media screen and (max-width: 700px) {
+    .All-moviesReturn {
+        padding: 20px;
+    }
+    .titleHolder {  
+        text-align: center;  
+        margin-bottom: 40px;  
+        font-size: 20px;
+        color: white;
+    }
+    .element {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .element-div {
+        width: calc(50% - 20px);
+        margin-bottom: 50px;
+        box-sizing: border-box;
+        color: white;
+        border: 1px solid orange;
+        border-radius: 10px;
+    }
+    .media {
+        position: relative;
+        overflow: hidden;
+    }
+    .image-container {
+        position: relative; 
+    }
+    .movie-image {
+        width: 100%;
+        height: 300px;
+        transition: transform 0.3s ease;
+        border-radius: 10px;
+    }
+    .overlay {  
+        display: flex;
+        position: absolute;  
+        top: 50%;  
+        left: 50%;  
+        transform: translate(-50%, -50%);  
+        background-color: black;  
+        color: white;  
+        padding: 10px;  
+        border-radius: 5px;  
+        font-size: 20px;  
+        font-weight: 600;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+        pointer-events: none;
+    }
+    .movieInfoHolder {
+        text-align: center;
+        margin-top: 10px;
+        font-size: 10px;
+    }
+    .movieTitleText {
+        font-weight: bold;
+    }
+    .ratingOfMovies {
+        color: orange;
+    }
+    .image-container:hover .overlay {
+        opacity: 1;
+        visibility: visible;
+    }
+    .movie-image:hover {
+        filter: blur(3px);
+    } 
+    .genre-options {
+        position: absolute;
+        background-color: white;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        z-index: 1;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        padding: 5%;
+    }
+}
+
+
+
+
+
+
+
+
+/* @media screen and (max-width: 700px) {
+    .element{
+        grid-template-columns: repeat(2, 1fr); 
+        display: inline-block;
+    }
+}baraye px pain tar vagti khastim 1 radif bashad o etela'at dar pain cart bashad is in estefade kon... niaz be kami taghirat dare. */

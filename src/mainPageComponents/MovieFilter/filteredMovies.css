@@ -1,0 +1,45 @@
+.genre-dropdown {  
+    position: relative;  
+    display: inline-block;  
+}  
+
+.main-genre-button {  
+    background-color: #007bff; /* Bootstrap primary color */  
+    color: white;  
+    border: none;  
+    border-radius: 5px;  
+    padding: 10px 15px;  
+    cursor: pointer;  
+}  
+
+/* Hide the dropdown options by default */  
+.genre-options {  
+    display: none;  
+    position: absolute;  
+    background-color: white;  
+    border: 1px solid #ccc;  
+    border-radius: 5px;  
+    z-index: 1;  
+    margin-top: 5px;  
+}  
+
+/* Show dropdown options on hover */  
+.genre-dropdown:hover .genre-options {  
+    display: block;  
+}  
+
+/* Style for each genre button in dropdown */  
+.genre-options button {  
+    background-color: white;  
+    color: #333;  
+    border: none;  
+    padding: 10px 15px;  
+    cursor: pointer;  
+    width: 100%; /* Full width of dropdown */  
+    text-align: left; /* Align text to the left */  
+}  
+
+/* Optional: Add hover effect for dropdown buttons */  
+.genre-options button:hover {  
+    background-color: #f0f0f0; /* Light gray on hover */  
+}

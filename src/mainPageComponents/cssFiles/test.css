@@ -1,0 +1,72 @@
+/* MostPopularMovies.css */  
+
+.All-moviesReturn {  
+    padding: 20px;  
+}  
+
+.titleHolder {  
+    text-align: center;  
+    margin-bottom: 20px;  
+    font-size: 24px;  
+}  
+
+.element {  
+    display: flex;  
+    flex-wrap: wrap; /* Allows items to wrap into the next line */  
+    justify-content: space-between; /* Distributes space between items */  
+}  
+
+.element-div {  
+    width: calc(50% - 20px); /* Two items per row with spacing */  
+    margin-bottom: 20px; /* Provides space between rows */  
+    box-sizing: border-box; /* Ensures padding is included in width */  
+}  
+
+.media {  
+    position: relative; /* Allows positioning of overlay */  
+    overflow: hidden; /* Hide overflow for images */  
+}  
+
+.image-container {  
+    position: relative;   
+}  
+
+.movie-image {  
+    width: 100%; /* Makes image responsive */  
+    height: auto; /* Keeps aspect ratio */  
+}  
+
+.overlay {  
+    position: absolute; /* Positioned on top of the image */  
+    bottom: 0; /* Aligns to the bottom */  
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */  
+    color: white; /* Text color for visibility */  
+    width: 100%;   
+    text-align: center;   
+    padding: 5px 0; /* Padding for the overlay text */  
+}  
+
+.movieInfoHolder {  
+    text-align: center; /* Center align text */  
+    margin-top: 5px; /* Space between image and text */  
+}  
+
+.movieTitleText {  
+    font-weight: bold; /* Makes title bold */  
+}  
+
+.ratingOfMovies {  
+    color: gold; /* Color for rating */  
+}
+
+/* codes for media */
+
+
+
+
+/* @media screen and (max-width: 700px) {
+    .element{
+        grid-template-columns: repeat(2, 1fr); 
+        display: inline-block;
+    }
+}baraye px pain tar vagti khastim 1 radif bashad o etela'at dar pain cart bashad is in estefade kon... niaz be kami taghirat dare. */

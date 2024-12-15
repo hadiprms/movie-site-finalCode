@@ -1,0 +1,177 @@
+@media screen and (min-width:700px) {
+    .searchBar-inputAndButton{
+        /* width: 100%;
+        max-width: 320px;
+        max-height: 40px; */
+        background-color: rgba(255, 255, 255, 0.2);
+        display: flex;
+        align-items: center;
+        border-radius: 60px;
+        /* padding: 10px 10px;
+        margin: 25px 0 0 10px; */
+    }
+    .searchBar-inputAndButton input{
+        background: transparent;
+        border: 0;
+        outline: none;
+        padding: 0 20px;
+        font-size: 20px;
+        color: white;
+    }
+    .searchBar-inputAndButton button{
+        margin-left: -67px;
+        border-radius: 33%;
+        background: rgba(255, 255, 255, 0.2);
+        color: white;
+        cursor: pointer;
+        font-weight: 400;
+        border: 0;
+    }
+    .searchBar-inputAndButton button img{
+        width: 10px;
+    }
+    .searchBar-inputAndButton input:placeholder{
+    color: white;
+    }
+    ::placeholder{
+        color: white;
+        font-family: 300;
+        font-size: 15px;
+    }
+    .siteName{
+        /* flex: 1; Allow siteName to take available space  */
+
+    }
+    .siteName span{
+        color: white;
+        font-size: 50px;
+    }
+    .siteName p{
+        color: orange;
+        font-size: 50px;
+    }
+    .siteName img{
+        width: 40px;
+    }
+    .searchResult img{
+        height: 150px;
+        width: auto;
+    }
+    .siteNameAndInput{
+        margin: 0px 0 50px 0;
+        padding-bottom: 80px;
+        position: fixed;
+        z-index: 9;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: 0;
+        height: 10%;
+        background-color: #0c0b0b79;
+        opacity: 0.7;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+    }
+    .searchResult{
+        display: flex;
+        position: absolute;
+        position: fixed;
+        /* height: 30%; */
+        transition: transform 1s ease;
+        top: 63px;
+        right: 0;
+        background: rgba(20, 24, 33, .75);
+        border: 1px solid rgba(20, 24, 33, .75);
+        border-radius: 5px;
+        z-index: 1000;
+        flex-wrap: wrap;
+        list-style-type: none;
+        padding: 30px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .searchResult-Info{
+        display: grid;
+        margin-right: 15px;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .searchBar-inputAndButton{
+        width: 100%;
+        max-width: 290px;
+        max-height: 40px;
+        background-color: rgba(255, 255, 255, 0.2);
+        display: flex;
+        align-items: center;
+        border-radius: 60px;
+        padding: 0px 0px;
+        margin: 17px 0 0 5px;
+    }
+    .searchBar-inputAndButton input{
+        background: transparent;
+        border: 0;
+        outline: none;
+        padding: 0 20px;
+        font-size: 20px;
+        color: white;
+    }
+    .searchBar-inputAndButton button{
+        margin-left: -87px;
+        border-radius: 33%;
+        background: rgba(255, 255, 255, 0.2);
+        color: white;
+        cursor: pointer;
+        font-weight: 400;
+        border: 0;
+    }
+    .searchBar-inputAndButton input:placeholder{
+    color: white;
+    }
+    ::placeholder{
+        color: white;
+        font-family: 300;
+        font-size: 15px;
+    }
+    .siteName span{
+        color: white;
+        font-size: 50px;
+    }
+    .siteName p{
+        color: orange;
+        font-size: 50px;
+        text-align: center;
+        margin-top: 10px;
+    }
+    .siteName img{
+        width: 40px;
+    }
+    .siteNameAndInput{
+        display: grid;
+        justify-content: center;
+    }
+    .searchResult{
+        display: flex;
+        justify-content: space-between;
+        height: 30%;
+        top: 63px;
+        background: rgba(20, 24, 33, .75);
+        border: 1px solid rgba(20, 24, 33, .75);
+        border-radius: 5px;
+        z-index: 1000;
+        flex-wrap: wrap;
+        list-style-type: none;
+        padding: 30px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .searchResult-Info{
+        display: grid;
+        margin-right: 15px;
+    }
+    .watchlistButton{
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+ 
