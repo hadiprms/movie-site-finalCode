@@ -1,16 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useReducer, useState } from 'react';
 import { Link } from 'react-router-dom';  
-import { useFavoriteMovies } from './FavoriteMoviesContext';
 import './cssFiles/MostPopularMovies.css';  
+import { favoriteMoviesReducer, initialState } from './favoriteMoviesReducer';
 
 const TopRatedMovies = ({ movies }) => {
-    const { state, dispatch } = useFavoriteMovies();
+    const [state, dispatch] = useReducer(favoriteMoviesReducer, initialState);
     const [displayCount, setDisplayCount] = useState(21);
     const [selectedGenre, setSelectedGenre] = useState('');
     const [genres, setGenres] = useState([]);
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
-    // Use effect to populate unique genres from the movies prop when movies change  
     useEffect(() => {
         const uniqueGenres = new Set();
         movies.forEach(movie => {
@@ -51,7 +50,7 @@ const TopRatedMovies = ({ movies }) => {
                                 <button
                                     key={genre}
                                     onClick={() => {
-                                        setSelectedGenre(genre); // Set the selected genre  
+                                        setSelectedGenre(genre);
                                         setIsDropdownOpen(false); // Close dropdown after selection  
                                     }}
                                     className={'genre-button'}
@@ -89,7 +88,7 @@ const TopRatedMovies = ({ movies }) => {
                                         ))}
                                     </div>
                                 </div>
-                                <div className='movieInfoHolder'>  
+                                <div className='movieInfoHolder'>
                                     <p className='movieTitleText' data-testid={`movie-title-${movie.node.id}`}>{movie.node.titleText.text}</p>
                                     <p>
                                         <span className='releaseYearOfMovies'>{movie.node.releaseYear.year} | </span>

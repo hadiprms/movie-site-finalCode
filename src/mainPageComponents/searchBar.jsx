@@ -38,6 +38,7 @@ const Fetcher = () => {
             clearTimeout(handler);
         };
     }, [query]);
+
     useEffect(() => {
         const handleClickOutside = (event) => {
             if (searchRef.current && !searchRef.current.contains(event.target)) {
@@ -52,19 +53,21 @@ const Fetcher = () => {
         };
     }, []);
 
+    const handleWatchlistClick = () => {
+        window.open('/watchlist', '_blank', 'noopener,noreferrer');
+    };
+
     return (
         <div style={{ position: 'relative' }} ref={searchRef}>
             <div className="siteNameAndInput">
                 <div className="siteName">
                     <Link to="/">
-                    <p>Best <span>Movies</span><img src="https://img.icons8.com/?size=100&id=11139&format=png&color=FD7E14" alt="image" /></p>  
+                        <p>Best <span>Movies</span><img src="https://img.icons8.com/?size=100&id=11139&format=png&color=FD7E14" alt="image" /></p>
                     </Link>
                 </div>
                 <div className="watchlistButton">
-                <Link to="/watchlist">
-                    <button>View Watchlist</button>
-                </Link>
-            </div>
+                    <button onClick={handleWatchlistClick}>View Watchlist</button>
+                </div>
                 <div className="searchBar-inputAndButton">
                     <input  
                         type="text"  
@@ -98,4 +101,3 @@ const Fetcher = () => {
 };  
 
 export default Fetcher;
- 
