@@ -10,6 +10,10 @@ const WatchlistPage = () => {
     const [movies, setMovies] = useState([]);
     const [loading, setLoading] = useState(true);
 
+    const detailGoHome = () => {
+        navigate('/');
+    };
+
     useEffect(() => {
         const fetchMovies = async () => {
             try {
@@ -46,7 +50,16 @@ const WatchlistPage = () => {
 
     return (
         <>
-            <h1 className='watchListTitle' style={{ color: 'white' }}>Your Favorites</h1>
+                <div className='watchlistTotalTitle'>
+                <p className='watchListTitle' style={{ color: 'white' }}>Your Favorites
+
+                </p>
+                <button onClick={detailGoHome} className='watchListPageHomeButton'>
+                    Go to Main Page
+                </button>
+                </div>
+
+
             <div className="watchlist-container">
                 {state.favorites.length === 0 ? (
                     <p>Your favorites list is empty. Start adding movies!</p>

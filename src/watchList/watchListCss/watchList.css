@@ -1,10 +1,11 @@
 .watchListTitle{
-    text-align: center;
-    position: absolute;
-    top: 0;
-    margin: auto;
-    width: 100%;
-    padding: 10px;
+    font-size: 50px;
+    font-weight: 600;
+}
+.watchlistTotalTitle{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 .watchlist-container {
     display: flex;
