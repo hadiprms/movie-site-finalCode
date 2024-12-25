@@ -26,6 +26,7 @@ const TopRatedMovies = ({ movies }) => {
         }
     };
 
+    // Filter movies based on selected genre
     const filteredMovies = selectedGenre
         ? movies.filter(movie => movie.node.titleGenres.genres.some(g => g.genre.text === selectedGenre))
         : movies;

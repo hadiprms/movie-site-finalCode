@@ -7,10 +7,11 @@ const MovieSlider = ({ movies }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
+    // Automatically change the current movie every 3 seconds
     useEffect(() => {  
         const interval = setInterval(() => {  
             setCurrentIndex((prevIndex) => (prevIndex + 1) % (movies.length || 1));  
-        }, 3000); // Change movie every 3 seconds  
+        }, 3000);
         return () => clearInterval(interval);  
     }, [movies.length]);  
 
@@ -23,7 +24,7 @@ const MovieSlider = ({ movies }) => {
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
-
+    // Get the movies to display based on the current index
     const displayedMovies = [  
         ...movies.slice(currentIndex, currentIndex + 4),  
         ...movies.slice(0, Math.max(0, 4 - (movies.length - currentIndex)))  

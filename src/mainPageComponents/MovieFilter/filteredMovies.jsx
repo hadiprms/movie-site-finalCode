@@ -38,6 +38,7 @@ const MovieList = () => {
         localStorage.setItem('watchlist', JSON.stringify(updatedWatchlist));
     };
 
+    // Load more movies by increasing the display count
     const loadMoreMovies = () => {
         setDisplayCount(prevCount => prevCount + 21);
     };

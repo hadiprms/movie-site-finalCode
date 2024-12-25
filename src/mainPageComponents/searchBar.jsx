@@ -29,6 +29,7 @@ const Fetcher = () => {
         }
     };
 
+    // Effect to fetch data when the query changes 
     useEffect(() => {
         if (query === '') {
             setData([]);
@@ -49,8 +50,8 @@ const Fetcher = () => {
     useEffect(() => {
         const handleClickOutside = (event) => {
             if (searchRef.current && !searchRef.current.contains(event.target)) {
-                setShowResults(false);
-                setQuery("");
+                setShowResults(false); // Hide results  
+                setQuery(""); // Clear query
             }
         };
 
